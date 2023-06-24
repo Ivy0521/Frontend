@@ -1,0 +1,71 @@
+nav{
+    height: 13vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+
+img{
+    width: 90px;
+    height: 74px;
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 34px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+li{
+    color: #fff;
+    float: left;
+    text-align: center;
+    width: 8em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+article{
+    color: #fff;
+    position: absolute;
+    right: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top:10px;
+    right: 50px;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("Gabriel_Logo.jpg");
+    background-size: 41%;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 87vh;
+    max-height: 100vh;
+    margin: 0px;
+    width: 100%;
+    background-color:  #221f20 ;
+    overflow: hidden;
+    padding: 10px;
+}

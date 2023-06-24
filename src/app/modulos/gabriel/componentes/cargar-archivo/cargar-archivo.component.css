@@ -1,0 +1,59 @@
+section{
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 0.1);
+    /* opacity: 0.5; */
+    width: 180vh;
+    height: 65vh;
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.title{
+    font-size: 34px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-weight: 500;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    height: 20vh;
+    width: 80%;
+    margin-top: 100px;
+}
+
+.button{
+    height: 34px;
+    width: 100px;
+    background-color: #3C36A5;
+    font-weight: 550;
+    border: none;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+button:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.delete{
+    margin-left: 60px; 
+    margin-bottom: -20px;
+    width: 40px;
+}
