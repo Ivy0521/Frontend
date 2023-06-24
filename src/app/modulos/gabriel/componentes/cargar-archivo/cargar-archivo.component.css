@@ -1,10 +1,15 @@
 section{
+    
+}
+
+main{
     align-items: center;
     justify-content: center;
+    align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
     /* opacity: 0.5; */
     width: 180vh;
-    height: 65vh;
+    height: 70vh;
     padding: 0px;
     padding-top: 10px;
 }
@@ -16,35 +21,34 @@ section{
     font-weight: 500;
 }
 
-article{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
  .input{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffff;
     height: 20vh;
     width: 80%;
     margin-top: 100px;
+    margin-left: 7em;
+    margin-right: 7em;
 }
 
 .button{
-    height: 34px;
-    width: 100px;
+    height: 44px;
+    width: 130px;
     background-color: #3C36A5;
     font-weight: 550;
     border: none;
+    color: #fff;
 }
 
 .btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    margin-top: 2em;
 }
 
 button:hover{
