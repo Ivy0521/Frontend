@@ -1,5 +1,15 @@
 section{
-    
+    width: 80vw;
+}
+
+.article-1{
+    margin-top: 120px;
+    min-width: 80vw;
+}
+
+.article-2{
+    margin-top: 120px;
+    min-width: 80vw;
 }
 
 main{
@@ -8,7 +18,7 @@ main{
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
     /* opacity: 0.5; */
-    width: 180vh;
+    width: 80vw;
     height: 70vh;
     padding: 0px;
     padding-top: 10px;
@@ -61,3 +71,64 @@ button:hover{
     margin-bottom: -20px;
     width: 40px;
 }
+
+ 
+.archivo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(0.9);
+    min-width: 60vw;
+}
+
+.detalles{
+    width: 60vw;
+    height: 25vh;
+    border-radius: 20px;
+    background: #fff;
+    padding: 20px;
+}
+
+
+.detalles-logo{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* opacity: 0.5; */
+    /* width: 180vh; */
+    width: 100%;
+    padding: 0px;
+}
+
+.sectionTexto{
+
+    align-items: center;
+    min-width: 90%;
+    height: 90%;
+    text-align: justify;
+    padding: 20px;
+    color: #000000;
+}
+
+.icono{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0;
+
+}
+
+.title-content{
+    margin-bottom: 4px;
+
+}
+
+
+.parrafo{
+    color: #FFFF;
+    font-size: medium;
+    font-family: Arial;
+    width: 100%;
+}
+

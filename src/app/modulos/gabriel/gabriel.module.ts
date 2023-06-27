@@ -8,6 +8,8 @@ import { TopbarComponent } from './componentes/topbar/topbar.component';
 import { NosotrosComponent } from './componentes/nosotros/nosotros.component';
 import { ResumenComponent } from './componentes/resumen/resumen.component';
 
+import { NgxFileDropModule } from 'ngx-file-drop';
+
 
 const router = RouterModule.forChild([
   // rutas principal
@@ -35,6 +37,7 @@ const router = RouterModule.forChild([
   imports: [
     CommonModule,
     router,
+    NgxFileDropModule
   ]
 })
 export class GabrielModule { }
