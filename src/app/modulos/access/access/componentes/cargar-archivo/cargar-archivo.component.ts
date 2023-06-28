@@ -18,6 +18,14 @@ export class CargarArchivoComponent {
 
     public files: NgxFileDropEntry[] = [];
     public fileLoaded: Boolean = false;
+
+public deleteFile(){
+ 
+  if(this.fileLoaded == true){
+     this.fileLoaded= false
+  }
+}
+
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
     for (const droppedFile of files) {
