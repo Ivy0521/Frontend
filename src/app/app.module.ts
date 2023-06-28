@@ -12,6 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { GabrielComponent } from './modulos/gabriel/gabriel.component';
 import { TopbarComponent } from './modulos/gabriel/componentes/topbar/topbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -20,8 +21,7 @@ import { TopbarComponent } from './modulos/gabriel/componentes/topbar/topbar.com
 @NgModule({
   declarations: [
     AppComponent,
-    GabrielComponent,
-    TopbarComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,10 @@ import { TopbarComponent } from './modulos/gabriel/componentes/topbar/topbar.com
     RouterModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    TopbarComponent,
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

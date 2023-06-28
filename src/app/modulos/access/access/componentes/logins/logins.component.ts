@@ -2,22 +2,24 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
-  standalone:true,
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.css']
+  selector: 'app-logins',
+  templateUrl: './logins.component.html',
+  styleUrls: ['./logins.component.css']
 })
-export class TopbarComponent {
+export class LoginsComponent {
 
   constructor(
     private router:Router,
     private _route: ActivatedRoute) { }
 
-  toNosotros(){
-    this.router.navigate(['/access/nosotros']);
+  public isLogin: Boolean = false
+
+  toRegistro(){
+    this.router.navigate(['/access/registro']);
   }
 
-  toCargar(){
+  toCargar(){    
     this.router.navigate(['/access/cargar-archivo']);
   }
+
 }

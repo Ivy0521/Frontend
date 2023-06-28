@@ -1,5 +1,9 @@
-
-
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+}
 section{
     display: flex;
     align-items: center;
@@ -9,6 +13,7 @@ section{
     width: 50vh;
     height: 60vh;
     padding: 0px;
+    
 }
 
 article{
@@ -115,4 +120,3 @@ h1{
   font-weight: 600;
   color: #fff;
 }
-

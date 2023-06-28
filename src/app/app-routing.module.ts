@@ -3,15 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  // {path: '', pathMatch: 'full', redirectTo: 'Gabriel/login'},
-  // {path: 'Gabriel/login', loadChildren: () => import('./modulos/gabriel/gabriel.module').then(t => t.GabrielModule)},
-  // {path: 'Gabriel/login', children:[
-  //   {path: '',loadChildren: () => import('./modulos/gabriel/gabriel.module').then(t => t.GabrielModule)}
-  // ]
-  // },
-
+  {path: '', pathMatch: 'full', redirectTo: 'access/logins'},
+  {path: 'access', children: [
+    {path: '',loadChildren: () => import('./modulos/access/access.module').then(t => t.AccessModule)}
+  ]
+  },
   {
-    path: 'Gabriel', children: [
+    path: 'gabriel', children: [
       { path: '', loadChildren: () => import('./modulos/gabriel/gabriel.module').then(t => t.GabrielModule) }
     ]
   },

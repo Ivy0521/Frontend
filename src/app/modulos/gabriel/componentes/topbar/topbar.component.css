@@ -4,6 +4,7 @@ nav{
     display: flex;
     align-items: center;
     position: sticky;
+    width: 100vw;
 }
 
 img{
@@ -73,3 +74,4 @@ section{
 .contenido{
     width: 100%;
 }
+

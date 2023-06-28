@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
 
 @Component({
@@ -8,10 +10,11 @@ import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 
   styleUrls: ['./cargar-archivo.component.css']
 })
 export class CargarArchivoComponent {
-
+   
   constructor(
     private router:Router,
-    private _route: ActivatedRoute) { }
+    private _route: ActivatedRoute,
+    private modalService: NgbModal) { }
 
     public files: NgxFileDropEntry[] = [];
     public fileLoaded: Boolean = false;
@@ -67,6 +70,11 @@ export class CargarArchivoComponent {
 
 
   toTraduccion(){
-    this.router.navigate(['/Gabriel/resumen']);
+    this.router.navigate(['/access/resumen']);
   }
 }
+
+
+
+
+
