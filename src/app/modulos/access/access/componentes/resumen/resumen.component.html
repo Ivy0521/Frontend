@@ -1,34 +1,36 @@
 <app-topbar></app-topbar>
 <ng-container *ngIf="isResumen == false">
 <main>
-<section>
-    <div >
-        <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="red" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
+<section class="parent">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="red" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
             <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
             <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.266.266 0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0 .45-.606zm1.64-1.33a12.71 12.71 0 0 1 1.01-.193 11.744 11.744 0 0 1-.51-.858 20.801 20.801 0 0 1-.5 1.05zm2.446.45c.15.163.296.3.435.41.24.19.407.253.498.256a.107.107 0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0 .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.876 3.876 0 0 0-.612-.053zM8.078 7.8a6.7 6.7 0 0 0 .2-.828c.031-.188.043-.343.038-.465a.613.613 0 0 0-.032-.198.517.517 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"/>
           </svg>
     </div>
 
 
-<div class="sectionTexto">
-  <div class="right">
-  <button class="btn-resumen" align="center" style="width: 100px;" (click)="mostrarResumen()">Mostrar resumen</button>
-</div>
+<div class="container">
+  <div class="parent-2">
   <div class="title-content">
-    <span style="color:#000000">{{"Nombre del documento"}}</span>
+    <span>{{"Nombre del documento"}}</span>
   </div>
   
   <div class="content">
    
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, illum atque eveniet dolorum, porro fugit eligendi quo, totam ea perferendis aspernatur magni asperiores fugiat obcaecati. Doloremque nisi qui maiores nihil.</p>
   </div>
+  <div class="button-resumen">
+    <button class="btn-resumen" (click)="mostrarResumen()">Mostrar resumen</button>
+  </div>
+</div>
 </div>
 </section>
 </main>
 <div align="center" style="margin-top: 1vh;">
 <p style="color: #fff;">Se tradujo de {{'Idioma 1'}} a {{'Idioma 2'}} {{'Nombre archivo'}}</p>
 </div>
-<article >
+<article class="button-download">
  
     <button class="btn-descargar">DESCARGAR
         <svg style="margin-left: 5px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-down" viewBox="0 0 16 16">
@@ -39,15 +41,14 @@
 </ng-container>
 
 <ng-container *ngIf="isResumen == true">
-<div class="cnt">
-  <div class="card" style=" margin-top: 15px;">
-    <div class="card-body espacio" style="margin: 0px; padding: 0px;">
-        <div align="center" id="htmlData"   style="margin: 0px; padding: 0px;">
-          <div class="right" style="padding: 20px;">
-            <button class="btn-resumen" align="center" style="width: 100px;" (click)="ocultarResumen()">Ocultar resumen</button>
-          </div>
-      <h5 class="card-title nombre " stiky style="color: #000000; font-weight: 650; font-size: 20px; margin-top: -50px; margin-bottom: 10px;">{{'Nombre Archivo'}}</h5>
-     <textarea align="center" disabled> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum dignissimos cumque quidem ut atque voluptates enim iste. Dolor laborum facere animi ipsa doloribus sequi, natus voluptate! Repudiandae, voluptatem deleniti?
+<div class="resumen">
+  <div class="parent-3">
+<div class="title-content">
+    <span>{{"Nombre del documento"}}</span>
+</div>
+
+<div class="content">
+  <textarea align="center" disabled> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cum dignissimos cumque quidem ut atque voluptates enim iste. Dolor laborum facere animi ipsa doloribus sequi, natus voluptate! Repudiandae, voluptatem deleniti?
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem voluptatem eveniet quibusdam dolorum fugiat placeat? Distinctio incidunt eveniet commodi eaque facilis cum vero quas repudiandae quibusdam ad. Reiciendis, non!
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit consectetur, quasi itaque excepturi eum hic nulla quae cumque explicabo nisi dolor deleniti illo ab odio, sed reprehenderit esse magni nam.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sapiente tenetur provident iste esse voluptatem eligendi, modi illo rerum labore harum perspiciatis earum quae voluptas sequi consequatur eveniet fugiat impedit.
@@ -62,15 +63,14 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi nam, quae inventore vitae omnis voluptate recusandae adipisci veniam natus facilis, assumenda accusamus animi aut voluptates dicta, sint aperiam optio.
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quam minus adipisci vero dolore deleniti facere dolorum dolores laborum optio! Cum quasi cupiditate quam a eveniet facere recusandae, exercitationem ad!
     </textarea>
-   
-     </div>
-     
-    </div>
-    
-  </div>
+</div>
 
+<div class="button-resumen" style="padding-top: 10px;">
+  <button class="btn-resumen" (click)="ocultarResumen()">Ocultar resumen</button>
+</div>
+
+  </div>
 </div>
 
 </ng-container>
-
 

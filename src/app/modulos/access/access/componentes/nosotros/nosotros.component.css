@@ -1,23 +1,54 @@
-section{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.parent {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;    
     background-color: rgba(60, 54, 165, 0.5);
-    /* opacity: 0.5; */
-    /* width: 180vh; */
     width: 90%;
-    margin-left: 4em;
-    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 70vh;
+    max-height: 80vh;
     padding: 0px;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    overflow: auto;
+    border-radius: 5px;
 }
 
-.sectionTexto{
-    
-    /* display: flex;
+.parent::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.parent::-webkit-scrollbar:vertical {
+    width:7px;
+}
+
+.parent::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.parent::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.parent::-webkit-scrollbar-thumb {
+    background-color:  rgba(60, 54, 165, 0.8);
+    border-radius: 20px;
+}
+
+.parent::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}
+
+
+.icon{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center; */
-    /* opacity: 0.5; */
+}
+
+.section-texto{
     align-items: center;
     min-width: 65%;
     height: 90%;
@@ -33,6 +64,7 @@ section{
 
 .title-content{
     margin-bottom: 4px;
+    text-decoration: underline;
 }
 
 
@@ -49,4 +81,22 @@ svg{
     font-size: medium;
     font-family: Arial;
     width: 100%;
+}
+
+
+@media (max-width:600px){
+    .parent {
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 70vh;
+        max-height: 80vh;
+        padding: 0px;
+        margin-top: 4vh;
+    }
+
+    .icon{
+        display: none !important;
+    }
 }

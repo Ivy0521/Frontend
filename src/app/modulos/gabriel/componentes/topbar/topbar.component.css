@@ -108,6 +108,7 @@ section{
      font-size: 22px;
      color: #fff;
      padding: 10px;
+     cursor: pointer;
  }
 
  .nav  .nav-header  .nav-title1 {
@@ -116,6 +117,7 @@ section{
     color: #fff;
     padding: 10px;
     margin-left: 30px;
+    cursor: pointer;
 }
    
  .nav  .nav-btn {
@@ -142,6 +144,7 @@ section{
    
  .nav  .nav-links  a:hover {
      background-color: rgba(0, 0, 0, 0.3);
+     color: #b7b4b4;
  }
    
  .nav  #nav-check {
