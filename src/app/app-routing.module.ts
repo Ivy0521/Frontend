@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'access/logins'},
+  {path: '', pathMatch: 'full', redirectTo: 'access/home'},
   {path: 'access', children: [
     {path: '',loadChildren: () => import('./modulos/access/access.module').then(t => t.AccessModule)}
   ]

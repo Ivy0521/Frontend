@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-
+import { AlertService } from '../../service/alert.service';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
 
@@ -14,15 +14,16 @@ export class CargarArchivoComponent {
   constructor(
     private router:Router,
     private _route: ActivatedRoute,
-    private modalService: NgbModal) { }
+    private modalService: NgbModal,
+    private alertService:AlertService) { }
 
     public files: NgxFileDropEntry[] = [];
     public fileLoaded: Boolean = false;
 
-public deleteFile(){
- 
+async deleteFile(){
   if(this.fileLoaded == true){
-     this.fileLoaded= false
+      this.fileLoaded= false
+      this.alertService.showAlert('Eliminado con éxito', 2000);
   }
 }
 
@@ -41,22 +42,6 @@ public deleteFile(){
 
           // Here you can access the real file
           console.log(droppedFile.relativePath, file);
-
-          /**
-          // You could upload it like this:
-          const formData = new FormData()
-          formData.append('logo', file, relativePath)
-
-          // Headers
-          const headers = new HttpHeaders({
-            'security-token': 'mytoken'
-          })
-
-          this.http.post('https://mybackend.com/api/upload/sanitize-and-save-logo', formData, { headers: headers, responseType: 'blob' })
-          .subscribe(data => {
-            // Sanitized logo returned from backend
-          })
-          **/
 
         });
       } else {
@@ -78,7 +63,7 @@ public deleteFile(){
 
 
   toTraduccion(){
-    this.router.navigate(['/access/resumen']);
+    this.router.navigate(['/access/chat']);
   }
 }
 

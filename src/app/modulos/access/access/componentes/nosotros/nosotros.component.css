@@ -62,14 +62,17 @@
 }
 
 
-.title-content{
-    margin-bottom: 4px;
-    text-decoration: underline;
+.title{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 
 .content{
-    margin-bottom: 4px;
+   color: #fff;
+   font-size: 20px;
+    text-align: justify;
 }
 
 svg{
@@ -82,6 +85,23 @@ svg{
     font-family: Arial;
     width: 100%;
 }
+
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.item-Carrusel{
+    display: grid;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 60vw;
+}
+
 
 
 @media (max-width:600px){
@@ -98,5 +118,16 @@ svg{
 
     .icon{
         display: none !important;
+    }
+
+    .item-Carrusel{
+        display: grid;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        width: 75vw;
+        margin-right: 2em;
+        margin-left: 2em;
     }
 }

@@ -17,7 +17,11 @@ export class TopbarComponent {
     this.router.navigate(['/access/nosotros']);
   }
 
+  toHome(){
+    this.router.navigate(['/access/home']);
+  }
+
   toCargar(){
-    this.router.navigate(['/access/cargar-archivo']);
+    this.router.navigate(['/access/chat']);
   }
 }

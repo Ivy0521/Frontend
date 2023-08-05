@@ -1,9 +1,8 @@
 <app-topbar></app-topbar>
 <section>
-<section>
     <main>
         <div class="title">
-            <h1 align="center"> TRADUCTOR DE PDF's</h1>
+            <h1 align="center">CONSULTOR DE LIBROS</h1>
         </div>
         <ng-container *ngIf="fileLoaded == false">
             <article class="article-1">
@@ -27,14 +26,14 @@
                         </label>
                     </div>
                     <div class="btn">
-                        <button class="button" (click)="toTraduccion()" disabled style="background-color: gray;">TRADUCIR</button>
+                        <button class="button" (click)="toTraduccion()" disabled style="background-color: gray;">CONSULTAR</button>
                     </div>
                 </form>
             </article>
         </ng-container>
         <ng-container *ngIf="fileLoaded == true">
             <div class="delete">
-                <button (click)="deleteFile()">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-trash-fill" viewBox="0 0 16 16">
                         <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
                     </svg>
@@ -75,10 +74,41 @@
                         </label>
                     </div>
                     <div class="btn">
-                        <button class="button" (click)="toTraduccion()">TRADUCIR</button>
+                        <button class="button" (click)="toTraduccion()">CONSULTAR</button>
                     </div>
                 </form>
             </article>
         </ng-container>
     </main>
+
 </section>
+<div class="info">
+    <p style="color: #fff; margin: 2em; font-size: 18px;">Plataforma líder en inteligencia artificial que te permite chatear directamente con documentos PDF.</p>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content" >
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5> -->
+          <button type="button" data-bs-dismiss="modal" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#ffff" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg>
+          </button>
+        </div>
+        <div class="modal-body" align="center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="#FB1C3C" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+              </svg>
+              <span style="font-weight: 700;">¿Desea eliminar este archivo?</span>
+              <div class="btn-modal">
+                <button type="button" class="btn button-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn button-eliminar" data-bs-dismiss="modal" (click)="deleteFile()">Eliminar</button>
+              </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
