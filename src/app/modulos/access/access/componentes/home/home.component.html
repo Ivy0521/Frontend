@@ -1,19 +1,125 @@
-<app-topbar></app-topbar>
+<div class="cont">
+<app-topbar ></app-topbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Effect</title>
+</head>
+<body>
+  
+  <main>
+    <section class="no-parallax">
+      <!-- <h1>¡Hola a todos!</h1> -->
 
-<section> 
-<div class="child-1">
-    <div class="ghost">
-    <img src="Gabriel_Logo.jpg" width="520px" height="680px">
+        <div class="child-1">
+            <div class="ghost">
+            <img src="Gabriel_Logo5.png" width="520px" height="680px">
+        </div>
+        </div>
+        <div class="child-2">
+            <button class="button" (click)="toChat()">
+                Conversar
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+              </button>
+        
+        </div>
+
+    </section>
+    <section class="parallax bg">
+        <div class="child2-1">
+            <div class="ghost">
+              Bienvenido a GABRIEL, la plataforma líder en inteligencia artificial que te permite chatear directamente con documentos PDF.
+        </div>
+        </div>
+
+
+    </section>
+    <section class="no-parallax">
+      <div class="ghost">
+        <img src="descarga.jpg">
+    </div>
+    </section>
+  </main>
+  
+</body>
+</html>
+
+
+
+<!-- <div class="parent-container">
+    <section class="parent"> 
+        <div class="child-1">
+            <div class="ghost">
+            <img src="Gabriel_Logo.jpg" width="520px" height="680px">
+        </div>
+        </div>
+        <div class="child-2">
+            <button class="button" (click)="toChat()">
+                Conversar
+                <div class="button__horizontal"></div>
+                <div class="button__vertical"></div>
+              </button>
+        
+        </div>
+        </section>
+        <section class="parent-2 parallax bg"> 
+            <div class="child2-1">
+                <div class="ghost">
+                <img src="Gabriel_Logo.jpg" width="520px" height="680px">
+            </div>
+            </div>
+            <div class="child2-2">
+                <button class="button" (click)="toChat()">
+                    Conversar
+                    <div class="button__horizontal"></div>
+                    <div class="button__vertical"></div>
+                  </button>
+            
+            </div>
+            <div class="child2-3">
+                <div class="ghost">
+                <img src="Gabriel_Logo.jpg" width="520px" height="680px">
+            </div>
+            </div>
+            </section>
+</div> -->
 </div>
-</div>
-<div class="child-2">
-    <button class="button" (click)="toChat()">
-        Comenzar
-        <div class="button__horizontal"></div>
-        <div class="button__vertical"></div>
-      </button>
-
-</div>
-</section>
 
 
+
+
+
+
+<!-- <section class="parent2">
+   
+</section> -->
+
+
+<!-- <main>
+<header>
+    <div class="child-1">
+        <div class="ghost">
+        <img src="Gabriel_Logo.jpg" width="520px" height="680px">
+    </div>
+    </div>
+    <div class="child-2">
+        <button class="button" (click)="toChat()">
+            Conversar
+            <div class="button__horizontal"></div>
+            <div class="button__vertical"></div>
+          </button>
+    
+    </div>
+  </header>
+  <section class="section1">
+    <h1>Section w/o parallax effect</h1>
+  </section>
+  <section class="section2">
+    <h1>Section w/ parallax effect</h1>
+  </section>
+</main> -->

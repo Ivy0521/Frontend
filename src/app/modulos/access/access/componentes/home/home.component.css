@@ -1,16 +1,104 @@
+.cont{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+}
 
-section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    background: url("Fondo4.png");
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 90vh;
+main 
+{
+  height: 90vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  
+}
+
+
+main::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+main::-webkit-scrollbar:vertical {
+  width:0px;
+}
+
+main::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+main::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+
+section 
+{
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+section h1
+{
+  text-align: center;
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+.no-parallax 
+{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0;
+  background: url("Fondo4.png");
+  background-color: #000;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  overflow-y: none;
+overflow-x: none;
+  z-index: 999;
+}
+
+.parallax{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+  min-height: 100vh;
+}
+
+.parallax h1 
+{
+  width: 60%;
+  font-size: 2rem;
+}
+
+.parallax::after 
+{
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.bg::after 
+{
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("photo3.jpg");
+  background-size: cover;
 }
 
 .child-1{
@@ -25,19 +113,26 @@ section{
     justify-content: center;
 }
 
-/* button{
-    width: 200px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: #000000;
-    color: #fff;
-    font-size: 18px;
-    border: 1px solid rgb(255, 255, 255);
+.child2-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1em;
+  font-size: 40px;
 }
 
-button:hover{
-    transform: scale(0.9);
-} */
+.child2-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child2-3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .ghost {
     animation: float 3s ease-out infinite;
@@ -132,3 +227,5 @@ button:hover{
   .button:hover .button__vertical {
     transform: scaleY(0);
   }
+
+

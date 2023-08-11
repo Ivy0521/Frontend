@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { Component, NgModule, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 import { AlertService } from '../../service/alert.service';
 
 
@@ -9,11 +9,32 @@ import { AlertService } from '../../service/alert.service';
 })
 export class ChatComponent {
 
-  constructor(private alertService:AlertService) { }
+  constructor(private alertService:AlertService) { 
+    this.alertService.loadScript();
+  }
+  @ViewChild('messageContainer') messageContainer!: ElementRef
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+
+  scrollToBottom(): void {
+    const container = this.messageContainer.nativeElement;
+    container.scrollTop = container.scrollHeight;
+  }
 
     ngOnInit(): void {
+      this.alertService.loadScript();
       console.log(this.pdf) // Imprimimos la lista de pdf
     }
+
+  inputValue: string = ''; // Valor del input
+  isInputEmpty: boolean = true; // Variable para habilitar/deshabilitar el botón
+
+  checkInput() {
+    this.isInputEmpty = this.nuevoMensaje.trim() === ''; // Verificar si el input está vacío
+  }
+
 
     nuevoMensaje: string = "" // Variable que almacena el mensaje ingresado por el usuario
     nuevoMensajeIA: string = "" // Variable de prueba que almacenaba el mensaje de la IA
@@ -34,16 +55,24 @@ export class ChatComponent {
     mensajes: any = [
       {
         emisor: "user", // tipo de emisor para el usuario
-        texto: "mensaje prueba" // Contenido del mensaje
+        texto: "¿Quien es el autor del libro?" // Contenido del mensaje
       },
       {
         emisor: "ia", // tipo de emisor para la respuesta(IA)
-        texto: "mensaje prueba"
+        texto: " El autor del libro es M. Morris Mano"
+      },
+      {
+        emisor: "user", // tipo de emisor para el usuario
+        texto: "¿En que año se publico el libro?" // Contenido del mensaje
       },
       {
         emisor: "ia", // tipo de emisor para la respuesta(IA)
-        texto: "mensaje prueba"
-      }
+        texto: " El libro se publico en el año 2007"
+      },
+      // {
+      //   emisor: "ia", // tipo de emisor para la respuesta(IA)
+      //   texto: "mensaje prueba"
+      // }
     ]
 
     // Lista de los pdf
@@ -86,6 +115,7 @@ export class ChatComponent {
       }
       this.mensajes.push(mensaje) // Agrega el nuevo mensaje a la lista
       this.nuevoMensaje="" // Resetea el input
+      this.isInputEmpty = true
     }
 
     //Función de prueba de la respuesat de la IA
