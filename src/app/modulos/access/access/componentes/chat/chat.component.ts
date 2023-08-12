@@ -89,26 +89,7 @@ export class ChatComponent {
 
     // Lista de prueba para el envio y recepcion de los msj identificados por el tipo de emisor
     mensajes: any = [
-      {
-        emisor: "user", // tipo de emisor para el usuario
-        texto: "¿Quien es el autor del libro?" // Contenido del mensaje
-      },
-      {
-        emisor: "ia", // tipo de emisor para la respuesta(IA)
-        texto: " El autor del libro es M. Morris Mano"
-      },
-      {
-        emisor: "user", // tipo de emisor para el usuario
-        texto: "¿En que año se publico el libro?" // Contenido del mensaje
-      },
-      {
-        emisor: "ia", // tipo de emisor para la respuesta(IA)
-        texto: " El libro se publico en el año 2007"
-      },
-      // {
-      //   emisor: "ia", // tipo de emisor para la respuesta(IA)
-      //   texto: "mensaje prueba"
-      // }
+
     ]
 
     // Lista de los pdf
