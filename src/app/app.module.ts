@@ -32,6 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     TopbarComponent,
     NgbModule,
+    HttpClientModule
     
   ],
   providers: [],

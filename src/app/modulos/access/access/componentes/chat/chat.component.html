@@ -16,9 +16,9 @@
     <!-- Contenedor del envio y previsualizacion del PDF -->
     <div class="child-1">
       <div *ngIf="isFile==false" align="center">
-        <img src="Gabriel_Logo5.png" width="400px" height="500px">
+        <img src="../../../../../../assets/Gabriel_Logo.jpg" width="400px" height="500px">
         <!-- Uso de la funcion que se encarga de recibir el documento -->
-        <input (change)="onFileSelected()" type="file" id="file" class="input">
+        <input (change)="onFileSelected()" type="file" id="file" class="input" (ngModel)="file">
       </div>
       <ng-container *ngIf="isFile == true">
         <!-- Previsualizacion del documento PDF  -->
